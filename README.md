@@ -58,7 +58,7 @@ udacity_robot_ball_chaser            # Project Files
 
 ## Prerequisites
  
-* Install [ROS kinetic (ros-melodic-desktop-full)](http://wiki.ros.org/kinetic/Installation/Ubuntu) on Linux.
+* Install [ROS kinetic (ros-kinetic-desktop-full)](http://wiki.ros.org/kinetic/Installation/Ubuntu) on Linux.
 
 
 ## Build and Launch
