@@ -59,9 +59,13 @@ udacity_robot_ball_chaser            # Project Files
 ## Prerequisites
  
 * Install [ROS kinetic (ros-kinetic-desktop-full)](http://wiki.ros.org/kinetic/Installation/Ubuntu) on Linux.
-
-
-## Build and Launch
+* Build requiremet package
+``` 
+$ chmod +x build.sh
+$ bash build.sh
+```
+---
+## Build and Launch Ball Chaser
 
 1. Clone and initialize project with a workspace.
 ```console
@@ -86,3 +90,17 @@ $ roslaunch ball_chaser ball_chaser.launch
 ```
 
 4. Move the white ball and place in front of the mobile robot. The robot will follow the ball.
+
+---
+## Build amcl package
+
+```
+$ mkdir -p ~/Desktop/udacity_ws/src
+$ cd ~/Desktop/udacity_ws/src
+$ git clone https://github.com/mantues/udacity_robot_ball_chaser_kinetic_package
+$ cd ~/Desktop/udacity_ws
+$ wget "https://drive.google.com/uc?export=download&id=19mtEc43J4ap9QeB9LFLjjItggebN4iKZ" -O map.pgm
+$ cp map.pgm src/udacity_robot_ball_chaser_kinetic_package/myrobot/maps/map.pgm
+$ catkin_make
+$ source ~/Desktop/udacity_ws/devel/setup.bash
+```
