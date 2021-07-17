@@ -12,7 +12,7 @@
   -->
   <node pkg="amcl" type="amcl" name="amcl" output="screen" args="/scan:=/scan">
     <!-- Odometry model parameters -->
-    <param name="odom_alpha" value="0.1"/>    
+    <param name="odom_alpha" value="0.1"/>
     <param name="odom_alpha2" value="0.1"/>
     <param name="odom_alpha3" value="0.1"/>
     <param name="odom_alpha4" value="0.1"/>
@@ -67,7 +67,7 @@
   </node>
 
   <!-- Rviz -->
-  <!-- <node pkg="rviz" type="rviz" args="-d '$(find myrobot)/rviz/udacity_movebase.rviz'" name="visualizer" respawn="true" /> -->
+  <node pkg="rviz" type="rviz" args="-d '$(find myrobot)/rviz/udacity_movebase.rviz'" name="visualizer" respawn="true" />
 
 
 </launch>
