@@ -1,5 +1,5 @@
 
-・ To build robot ball chaser, [detail is here]([https://github.com/mantues/udacity_robot_ball_chaser](udacity_robot_ball_chaser))
+・ To build robot ball chaser, detail is [here.](https://github.com/mantues/udacity_robot_ball_chaser)
 
 ---
 ## AMCL package(ROS-kinetic-package)
