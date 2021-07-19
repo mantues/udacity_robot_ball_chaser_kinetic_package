@@ -63,6 +63,7 @@
     <rosparam file="$(find myrobot)/configuration_files/costmap_common_params.yaml" command="load" ns="local_costmap" />
     <rosparam file="$(find myrobot)/configuration_files/local_costmap_params.yaml" command="load" />
     <rosparam file="$(find myrobot)/configuration_files/global_costmap_params.yaml" command="load" />
+    <rosparam file="$(find myrobot)/configuration_files/move_base_params.yaml" command="load" />
     <rosparam file="$(find myrobot)/configuration_files/base_local_planner_params.yaml" command="load" />
   </node>
 
