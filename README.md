@@ -26,9 +26,10 @@ udacity_robot_ball_chaser            # Project Files
 
 ```
 ## rqt-graph
-```
 
-```
+<img src="image/AMCL_rqt_graph.png">
+
+
 ---
 ## Prerequisites
  
@@ -49,7 +50,7 @@ $ cd ~/Desktop/udacity_ws
 $ catkin_make
 $ source ~/Desktop/udacity_ws/devel/setup.bash
 ```
-## Making a world map using g-mapping package
+## Make a world map using g-mapping package
 ```
 $ roslaunch myrobot nav_world.launch
 ```
@@ -66,6 +67,8 @@ another shell
 ```
 $ rosrun map_server map_saver -f <filename>
 ```
+<img src="image/gmapping.png">
+
 ## Launch AMCL package to estimate my position.
 ```
 $ roslaunch myrobot nav_world.launch
