@@ -82,7 +82,7 @@ Launch the myrobot node with below command.
 $ roslaunch myrobot nav_world.launch
 ```
 
-Launch the AMCL node with below command.
+Launch the AMCL node with below command in a new terminal window.
 ```
 $ roslaunch myrobot amcl.launch
 ```
