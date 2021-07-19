@@ -2,7 +2,7 @@
   amcl for udacity robot
 -->
 <launch>
-  <arg name="map_file" default="$(find myrobot)/maps/map.yaml"/>　<!--select map file-->
+  <arg name="map_file" default="$(find myrobot)/maps/map_g.yaml"/>　<!--select map file-->
   <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)" />
 
 
@@ -64,6 +64,11 @@
     <rosparam file="$(find myrobot)/configuration_files/local_costmap_params.yaml" command="load" />
     <rosparam file="$(find myrobot)/configuration_files/global_costmap_params.yaml" command="load" />
     <rosparam file="$(find myrobot)/configuration_files/base_local_planner_params.yaml" command="load" />
+  </node>
+
+  <!--- 　teleop node -->
+  <node pkg="teleop_twist_keyboard" type="teleop_twist_keyboard.py" name="teleop">
+    <remap from="cmd_vel" to="cmd_vel"/>
   </node>
 
   <!-- Rviz -->
