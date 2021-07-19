@@ -92,9 +92,11 @@ Launch the teleop node with below command in a new terminal window.
 $ roslaunch myrobot teleop.launch
 ```
 
-(TIPS)
+[TIPS]
+
+How to reconfigure AMCL using rqt_reconfigure's graphical user interface.
+
 Launch the rqt_reconfigure node with below command in a new terminal window. 
- How to reconfigure AMCL using rqt_reconfigure's graphical user interface.
 ```
 $ rosrun rqt_reconfigure rqt_reconfigure
 ```
