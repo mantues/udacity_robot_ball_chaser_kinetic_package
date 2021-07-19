@@ -10,19 +10,19 @@ Udacity Robotics Software Engineer Nanodegree Program. This robot guesses where 
 ---
 ## Structure
 ```
-udacity_robot_ball_chaser            # Project Files
-├──myrobot                           # my_robot package
-│   ├──configuration_files           # config file
-│   ├──launch                        # launch folder for my_robot package
-│   ├──maps                          # mapdata for AMCL package
-│   ├──meshes                        # meshes folder for hokuyo sensor
-│   ├──rviz                          # Rviz setting file
-│   ├──urdf                          # myrobot data for gazebo
-│   ├──worlds                        # world data for gazebo
-├── teleop_twist_keyboard            # teleop package
-├── slam_gmapping                    # gmapping package
-├── openslam_gmapping                # gmapping package
-└── ball_chaser                      # ball_chaser package
+udacity_robot_ball_chaser_kinetic_package            # Project Files
+├──myrobot                                           # my_robot package
+│   ├──configuration_files                           # config files
+│   ├──launch                                        # launch folder for my_robot package
+│   ├──maps                                          # mapdata for AMCL package
+│   ├──meshes                                        # meshes folder for hokuyo sensor
+│   ├──rviz                                          # Rviz setting files
+│   ├──urdf                                          # myrobot data for gazebo
+│   ├──worlds                                        # world data for gazebo
+├── teleop_twist_keyboard                            # teleop package
+├── slam_gmapping                                    # gmapping package
+├── openslam_gmapping                                # gmapping package
+└── ball_chaser                                      # ball_chaser package
 
 ```
 ## rqt-graph
@@ -51,38 +51,49 @@ $ catkin_make
 $ source ~/Desktop/udacity_ws/devel/setup.bash
 ```
 ## Make a world map using g-mapping package
+
+Launch the myrobot node with below command.
+
 ```
 $ roslaunch myrobot nav_world.launch
 ```
-another shell
+
+Launch the gmapping node with below command in a new terminal window.
 ```
 $ roslaunch myrobot gmapping.launch
 ```
-another shell
+
+Launch the teleop node with below command in a new terminal window.
 ```
 $ roslaunch myrobot teleop.launch
 ```
+
 Control the robot to complete the map.
-another shell
+Save a map below command in a new terminal window.
 ```
 $ rosrun map_server map_saver -f <filename>
 ```
 <img src="image/gmapping.png">
 
-## Launch AMCL package to estimate my position.
+## Launch AMCL package to estimate my position
+
+Launch the myrobot node with below command.
 ```
 $ roslaunch myrobot nav_world.launch
 ```
-another shell
+
+Launch the AMCL node with below command.
 ```
 $ roslaunch myrobot amcl.launch
 ```
-another shell
+
+Launch the teleop node with below command in a new terminal window.
 ```
 $ roslaunch myrobot teleop.launch
 ```
 
-another shell (TIPS)
+(TIPS)
+Launch the rqt_reconfigure node with below command in a new terminal window. 
  How to reconfigure AMCL using rqt_reconfigure's graphical user interface.
 ```
 $ rosrun rqt_reconfigure rqt_reconfigure
